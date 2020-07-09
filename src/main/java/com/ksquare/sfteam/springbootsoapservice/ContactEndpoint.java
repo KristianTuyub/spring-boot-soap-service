@@ -1,5 +1,6 @@
 package com.ksquare.sfteam.springbootsoapservice;
 
+import https.theksquaregroup_com.xml.contact.Contact;
 import https.theksquaregroup_com.xml.contact.ContactDetailsRequest;
 import https.theksquaregroup_com.xml.contact.ContactDetailsResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +25,7 @@ public class ContactEndpoint {
     public ContactDetailsResponse getContact(@RequestPayload ContactDetailsRequest request) {
         ContactDetailsResponse response = new ContactDetailsResponse();
         response.setContact(contactRepository.findContact(request.getName()));
-
+        
         return response;
     }
 }
